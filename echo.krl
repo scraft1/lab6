@@ -2,10 +2,11 @@ ruleset echo {
   meta {
     name "Echo"
     description <<
-A first ruleset for the Quickstart
+Lab 6 part 1
 >>
     author "Spencer Craft"
     logging on
+    sharing on
   }
 
   rule hello is active {
