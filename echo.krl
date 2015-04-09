@@ -1,4 +1,13 @@
 ruleset echo {
+  meta {
+    name "Echo"
+    description <<
+A first ruleset for the Quickstart
+>>
+    author "Spencer Craft"
+    logging on
+  }
+
   rule hello is active {
     select when echo hello
     send_directive("say") with
