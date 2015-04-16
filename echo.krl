@@ -1,9 +1,7 @@
 ruleset echo {
   meta {
     name "Echo"
-    description <<
-Lab 6 part 1
->>
+    description <<Lab 6 part 1>>
     author "Spencer Craft"
     logging on
     sharing on
