@@ -7,10 +7,11 @@ ruleset see_songs {
     sharing on
   }
 
-  rule see_songs is active {
+  rule songs is active {
     select when echo message input "(.*)" setting(m)
-    send_directive("sing") with
-      song = m;
+    if event:attr("msg_type").match("song") then 
+      send_directive("sing") with
+        song = m;
   }
  
 }
