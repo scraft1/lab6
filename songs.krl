@@ -19,7 +19,7 @@ ruleset see_songs {
   }
 
   rule find_hymn is active {
-    select when explicit sung song re#[gG][oO][dD]#;
+    select when explicit sung song re/god/i;
     always {
       raise explicit event "found_hymn"
     }
