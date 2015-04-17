@@ -21,7 +21,7 @@ ruleset see_songs {
   rule find_hymn is active {
     select when explicit sung;
     fired {
-      log "it fired find_hymn";
+      log song
     }
   }
 
