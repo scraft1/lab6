@@ -19,10 +19,9 @@ ruleset see_songs {
   }
 
   rule find_hymn is active {
-    select when explicit sung
-      alert('Alert Event Fired');
+    select when explicit sung song "god";
     always {
-      raise explicit event "found_hymn"
+      raise explicit event "found_hymn";
     }
   }
 
