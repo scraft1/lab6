@@ -20,7 +20,7 @@ ruleset see_songs {
 
   rule find_hymn is active {
     select when explicit sung
-      notify("Header","This is the message");
+      alert('Alert Event Fired');
     always {
       raise explicit event "found_hymn"
     }
