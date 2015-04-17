@@ -19,7 +19,9 @@ ruleset see_songs {
   }
 
   rule find_hymn is active {
-    select when explicit sung where song.match(re/god/i);
+    select when explicit sung
+    if event:attr("song").match(re/god/i) then
+      notify();
     always {
       raise explicit event "found_hymn"
     }
