@@ -12,6 +12,10 @@ ruleset see_songs {
     input "(.*)" setting(m)
     send_directive("sing") with
       song = m;
+    always {
+      raise explicit event "sung"
+        attributes song:m
+    }
   }
- 
+
 }
