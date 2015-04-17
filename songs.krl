@@ -19,9 +19,10 @@ ruleset see_songs {
   }
 
   rule find_hymn is active {
-    select when explicit sung;
-    fired {
-      log song
+    select when explicit sung
+      notify("Header","This is the message");
+    always {
+      raise explicit event "found_hymn"
     }
   }
 
