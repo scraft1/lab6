@@ -14,7 +14,7 @@ ruleset see_songs {
       song = m;
     always {
       raise explicit event "sung"
-        attributes song:input
+        with song = "god"
     }
   }
 
