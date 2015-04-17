@@ -14,15 +14,14 @@ ruleset see_songs {
       song = m;
     always {
       raise explicit event "sung"
-        attributes song:m
+        attributes song:m;
     }
   }
 
   rule find_hymn is active {
-    select when explicit sung 
-    log "it fired find_hymn";
-    always {
-      raise explicit event "found_hymn"
+    select when explicit sung;
+    fired {
+      log "it fired find_hymn";
     }
   }
 
