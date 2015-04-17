@@ -19,7 +19,7 @@ ruleset see_songs {
   }
 
   rule find_hymn is active {
-    select when explicit sung where song.match(#[Gg][Oo][Dd]#);
+    select when explicit sung song re#[gG][oO][dD]#;
     always {
       raise explicit event "found_hymn"
     }
