@@ -14,12 +14,12 @@ ruleset see_songs {
       song = m;
     always {
       raise explicit event "sung"
-        with song = "god"
+        with song = m
     }
   }
 
   rule find_hymn is active {
-    select when explicit sung song "god";
+    select when explicit sung where song re/god/i;
     always {
       raise explicit event "found_hymn"
     }
